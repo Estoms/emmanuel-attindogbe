@@ -204,7 +204,7 @@ function DeveloperPhoto() {
         zIndex:       1,
       }}>
         <Image
-          src="/William-Attindogbe-BD-2.jpg"
+          src="/photo.jpg"
           alt="Emmanuel Attindogbe — Développeur d'Applications & Systèmes"
           fill
           style={{ objectFit: 'cover', objectPosition: 'center top' }}

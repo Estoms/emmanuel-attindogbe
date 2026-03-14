@@ -330,6 +330,9 @@ export default function ParcoursView({ experiences, skillCategories, education, 
         @media (max-width: 900px) {
           .parcours-grid { grid-template-columns: 1fr !important; }
           .parcours-aside { order: -1; }
+          .parcours-aside > div {
+            position: static !important;
+          }
         }
       `}</style>
     </div>

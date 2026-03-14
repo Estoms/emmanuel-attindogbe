@@ -5,9 +5,7 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import {
   Shield, Server, Link, Leaf, Lock, Zap,
-  MapPin, Mail, ArrowRight,
 } from 'lucide-react';
-import NextLink from 'next/link';
 import { aboutData } from '@/data/about';
 
 type Props = { data: typeof aboutData };
@@ -257,6 +255,9 @@ export default function AboutView({ data }: Props) {
           }
           .story-card {
             grid-template-columns: 1fr !important;
+          }
+          .about-top-grid > div:first-child {
+            width: 100%;
           }
         }
       `}</style>

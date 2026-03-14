@@ -427,6 +427,7 @@ export default function HeroView({ featuredProjects, experiences }: Props) {
 
               {/* CTAs */}
               <motion.div
+                className="hero-cta-buttons"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -472,6 +473,7 @@ export default function HeroView({ featuredProjects, experiences }: Props) {
 
             {/* DROITE — Terminal */}
             <motion.div
+              className="hero-terminal-wrapper"
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.65, delay: 0.35 }}
@@ -487,6 +489,7 @@ export default function HeroView({ featuredProjects, experiences }: Props) {
 
           {/* Scroll indicator */}
           <motion.div
+            className="scroll-indicator"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.4 }}
@@ -527,6 +530,7 @@ export default function HeroView({ featuredProjects, experiences }: Props) {
 
           {/* Photo — arrive EN PREMIER */}
           <motion.div
+            className="developer-photo-wrapper"
             initial={{ opacity: 0, x: -60 }}
             animate={photoCtrl}
             style={{
@@ -1136,6 +1140,21 @@ export default function HeroView({ featuredProjects, experiences }: Props) {
           .featured-projects-grid {
             grid-template-columns: 1fr !important;
             gap: 1rem !important;
+          }
+          .hero-terminal-wrapper {
+            display: none !important;
+          }
+          .scroll-indicator {
+            display: none !important;
+          }
+          .hero-cta-buttons a {
+            flex: 1;
+            justify-content: center;
+            text-align: center;
+          }
+          .developer-photo-wrapper {
+            display: flex;
+            justify-content: center;
           }
         }
       `}</style>

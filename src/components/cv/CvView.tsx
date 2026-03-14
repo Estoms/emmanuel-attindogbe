@@ -124,6 +124,10 @@ export default function CvView({ highlights }: Props) {
           .cv-grid {
             grid-template-columns: 1fr !important;
             gap: 2rem !important;
+            text-align: center;
+          }
+          .cv-grid > div:first-child {
+            align-items: center;
           }
         }
       `}</style>

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FileText, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import ThemeToggle from '@/components/layout/ThemeToggle';
 import LocaleSwitcher from '@/components/layout/LocaleSwitcher';

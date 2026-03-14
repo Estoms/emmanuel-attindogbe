@@ -147,3 +147,31 @@ body {
     cursor: none !important;
   }
 }
+
+/* ============================================
+   RESPONSIVE GLOBAL POLISH
+   ============================================ */
+@media (max-width: 768px) {
+
+  /* Container padding réduit sur mobile */
+  .container {
+    padding-inline: 1rem;
+  }
+
+  /* Titres de section */
+  h1 { letter-spacing: -0.03em; }
+  h2 { letter-spacing: -0.02em; }
+
+  /* Cards : padding réduit */
+  article {
+    padding: 1.25rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* Très petits écrans */
+  .container {
+    padding-inline: 0.875rem;
+  }
+}

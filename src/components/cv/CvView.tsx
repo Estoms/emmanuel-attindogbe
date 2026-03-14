@@ -1,11 +1,14 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Download, CheckCircle, FileText } from 'lucide-react';
 
 type Props = { highlights: string[] };
 
 export default function CvView({ highlights }: Props) {
+  const t = useTranslations('cv');
+
   return (
     <div style={{
       minHeight:      'calc(100vh - var(--header-height))',
@@ -29,14 +32,14 @@ export default function CvView({ highlights }: Props) {
               letterSpacing: '0.1em', textTransform: 'uppercase',
               color: 'var(--text-muted)', marginBottom: '0.6rem',
             }}>
-              Récapitulatif
+              {t('summary_label')}
             </p>
             <h1 style={{ fontSize: 'clamp(1.8rem, 3vw, 2.6rem)', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.2 }}>
               Emmanuel{' '}
               <span className="gradient-text">Attindogbe</span>
             </h1>
             <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)', marginTop: '0.5rem', fontFamily: 'var(--font-mono)' }}>
-              Développeur d&apos;Applications &amp; Systèmes
+              {t('role')}
             </p>
           </div>
 
@@ -75,10 +78,10 @@ export default function CvView({ highlights }: Props) {
 
           <div style={{ textAlign: 'center' }}>
             <p style={{ fontSize: '1.1rem', fontWeight: 600, color: 'var(--text-primary)', marginBottom: '0.4rem' }}>
-              Curriculum Vitæ
+              {t('file_label')}
             </p>
             <p style={{ fontSize: '0.825rem', color: 'var(--text-muted)' }}>
-              Version à jour — PDF, 1 page
+              {t('file_desc')}
             </p>
           </div>
 
@@ -99,11 +102,11 @@ export default function CvView({ highlights }: Props) {
             }}
           >
             <Download size={18} />
-            Télécharger le CV
+            {t('btn_download')}
           </motion.a>
 
           <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textAlign: 'center' }}>
-            Dernière mise à jour : 2025
+            {t('last_update')}
           </p>
         </motion.div>
       </div>

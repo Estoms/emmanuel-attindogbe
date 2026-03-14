@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+# Fichiers de contrôle projet
+MEMORY.md
+todo.md
+.cursorrules

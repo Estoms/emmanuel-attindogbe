@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { FileText, Menu, X } from 'lucide-react';
+import ThemeToggle from '@/components/layout/ThemeToggle';
+import LocaleSwitcher from '@/components/layout/LocaleSwitcher';
 import type { NavItem } from '@/types';
 
 const navItems: NavItem[] = [
@@ -36,7 +38,7 @@ export default function Header() {
       zIndex:          50,
       height:          'var(--header-height)',
       borderBottom:    `1px solid ${scrolled ? 'var(--border)' : 'transparent'}`,
-      backgroundColor: scrolled ? 'rgba(0,0,0,0.85)' : 'transparent',
+      backgroundColor: scrolled ? 'var(--header-bg-scrolled)' : 'transparent',
       backdropFilter:  scrolled ? 'blur(12px)' : 'none',
       transition:      'background-color var(--transition-base), border-color var(--transition-base)',
     }}>
@@ -104,41 +106,46 @@ export default function Header() {
             })}
           </ul>
 
-          {/* ── BOUTON CV ── */}
-          <a
-            href="/cv.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display:        'flex',
-              alignItems:     'center',
-              gap:            '0.45rem',
-              padding:        '0.5rem 1.1rem',
-              borderRadius:   '6px',
-              border:         '1px solid var(--accent-start)',
-              background:     'transparent',
-              color:          'var(--accent-start)',
-              fontWeight:     600,
-              fontSize:       '0.825rem',
-              letterSpacing:  '0.04em',
-              textDecoration: 'none',
-              transition:     'background var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast)',
-              boxShadow:      '0 0 0px var(--accent-glow)',
-            }}
-            onMouseEnter={e => {
-              e.currentTarget.style.background = 'var(--accent-start)';
-              e.currentTarget.style.color       = '#000';
-              e.currentTarget.style.boxShadow  = '0 0 18px var(--accent-glow)';
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.background = 'transparent';
-              e.currentTarget.style.color       = 'var(--accent-start)';
-              e.currentTarget.style.boxShadow  = '0 0 0px var(--accent-glow)';
-            }}
-          >
-            <FileText size={13} />
-            CV
-          </a>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            <LocaleSwitcher />
+            <ThemeToggle />
+
+            {/* ── BOUTON CV ── */}
+            <a
+              href="/cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display:        'flex',
+                alignItems:     'center',
+                gap:            '0.45rem',
+                padding:        '0.5rem 1.1rem',
+                borderRadius:   '6px',
+                border:         '1px solid var(--accent-start)',
+                background:     'transparent',
+                color:          'var(--accent-start)',
+                fontWeight:     600,
+                fontSize:       '0.825rem',
+                letterSpacing:  '0.04em',
+                textDecoration: 'none',
+                transition:     'background var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast)',
+                boxShadow:      '0 0 0px var(--accent-glow)',
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.background = 'var(--accent-start)';
+                e.currentTarget.style.color       = '#000';
+                e.currentTarget.style.boxShadow  = '0 0 18px var(--accent-glow)';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.color       = 'var(--accent-start)';
+                e.currentTarget.style.boxShadow  = '0 0 0px var(--accent-glow)';
+              }}
+            >
+              <FileText size={13} />
+              CV
+            </a>
+          </div>
 
         </nav>
 
@@ -186,26 +193,30 @@ export default function Header() {
               </li>
             ))}
             <li>
-              <a
-                href="/cv.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display:        'inline-flex',
-                  alignItems:     'center',
-                  gap:            '0.4rem',
-                  fontSize:       '0.875rem',
-                  color:          'var(--accent-start)',
-                  fontWeight:     600,
-                  textDecoration: 'none',
-                  border:         '1px solid var(--accent-start)',
-                  padding:        '0.45rem 1rem',
-                  borderRadius:   '6px',
-                }}
-              >
-                <FileText size={14} />
-                Télécharger mon CV
-              </a>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', marginTop: '0.5rem' }}>
+                <LocaleSwitcher />
+                <ThemeToggle />
+                <a
+                  href="/cv.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display:        'inline-flex',
+                    alignItems:     'center',
+                    gap:            '0.4rem',
+                    fontSize:       '0.875rem',
+                    color:          'var(--accent-start)',
+                    fontWeight:     600,
+                    textDecoration: 'none',
+                    border:         '1px solid var(--accent-start)',
+                    padding:        '0.45rem 1rem',
+                    borderRadius:   '6px',
+                  }}
+                >
+                  <FileText size={14} />
+                  Télécharger mon CV
+                </a>
+              </div>
             </li>
           </ul>
         </div>

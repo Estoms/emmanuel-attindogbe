@@ -1,0 +1,109 @@
+{
+  "nav": {
+    "projects":  "Projects",
+    "parcours":  "Journey",
+    "about":     "About",
+    "contact":   "Contact",
+    "cv":        "Resume"
+  },
+  "hero": {
+    "badge":        "Available — Open to opportunities",
+    "title1":       "Emmanuel",
+    "title2":       "ATTINDOGBE",
+    "role":         "Application & Systems Developer",
+    "description":  "From backend to production — I build web and mobile applications with real impact. Passionate about DevOps and responsible tech.",
+    "cta_projects": "View my projects",
+    "cta_contact":  "Contact me"
+  },
+  "intro": {
+    "label":    "The developer",
+    "line1":    "Developer passionate about the Full Stack and DevOps ecosystem.",
+    "line2":    "With 3 real-world experiences, I build robust applications — from complex backend to mobile interfaces.",
+    "line3":    "My goal: create technological solutions with real, measurable impact.",
+    "cta":      "Learn more",
+    "stat1_value": "3",  "stat1_label": "Field internships",
+    "stat2_value": "4",  "stat2_label": "Projects delivered",
+    "stat3_value": "5+", "stat3_label": "Languages"
+  },
+  "projects": {
+    "section_label":    "Work",
+    "section_title":    "Featured",
+    "section_highlight": "Projects",
+    "see_all":          "All projects",
+    "see_project":      "View project",
+    "page_title":       "My",
+    "page_highlight":   "Projects",
+    "page_description": "Applications designed, built and deployed — from real needs to operational solutions.",
+    "other_projects":   "Other Projects"
+  },
+  "parcours": {
+    "section_label":    "Experience",
+    "section_title":    "Career",
+    "section_highlight": "Overview",
+    "see_full":         "View full journey",
+    "page_title":       "My",
+    "page_highlight":   "Journey",
+    "page_description": "Professional experience, tech stack and academic background.",
+    "experiences_label": "Experience",
+    "skills_label":     "Tech Stack",
+    "formation_label":  "Education",
+    "softskills_label": "Soft Skills"
+  },
+  "about": {
+    "page_title":       "About",
+    "page_highlight":   "Me",
+    "label_formation":  "Current education",
+    "label_location":   "Location",
+    "label_available":  "Available — Open to opportunities",
+    "cta_contact":      "Contact me",
+    "story_title":      "My Story",
+    "interests_title":  "Tech Interests"
+  },
+  "contact": {
+    "badge":            "Available",
+    "title":            "Have a system to optimize?",
+    "highlight":        "Let's discuss your next technical challenge.",
+    "subtitle":         "I usually respond within 24 hours. No lost messages — a real conversation.",
+    "form_title":       "Send a message",
+    "label_name":       "Name",
+    "label_email":      "Email",
+    "label_subject":    "Subject",
+    "label_message":    "Message",
+    "placeholder_name":    "John Doe",
+    "placeholder_email":   "john@example.com",
+    "placeholder_subject": "Project proposal",
+    "placeholder_message": "Describe your project or need...",
+    "btn_send":    "Send message",
+    "btn_sending": "Sending...",
+    "success":     "Message sent successfully! I'll get back to you within 24h.",
+    "error":       "An error occurred. Please retry or contact me directly."
+  },
+  "cv": {
+    "summary_label": "Summary",
+    "role":          "Application & Systems Developer",
+    "file_label":    "Curriculum Vitæ",
+    "file_desc":     "Latest version — PDF, 1 page",
+    "btn_download":  "Download Resume",
+    "last_update":   "Last updated: 2025"
+  },
+  "cta_section": {
+    "label":       "Let's work together",
+    "title":       "Have a project in mind?",
+    "highlight":   "Let's talk.",
+    "description": "Available for freelance, internship or full-time positions. I respond within 24h.",
+    "btn_contact": "Contact me",
+    "btn_cv":      "Download Resume"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "metadata": {
+    "home_title":       "Emmanuel Attindogbe | Application & Systems Developer",
+    "home_description": "Full Stack developer specialized in web and mobile applications. 3 field internships, 4 projects delivered.",
+    "projects_title":   "Projects",
+    "parcours_title":   "Journey",
+    "about_title":      "About",
+    "contact_title":    "Contact",
+    "cv_title":         "Resume"
+  }
+}

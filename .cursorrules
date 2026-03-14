@@ -1,6 +1,0 @@
-RÈGLES ABSOLUES :
-1. Avant TOUTE action, lis `MEMORY.md` et `todo.md`.
-2. Exécute UNIQUEMENT la première tâche non cochée dans `todo.md`. N'anticipe jamais.
-3. Ne modifie pas le code fonctionnel sans mon accord.
-4. À la fin de chaque tâche réussie, mets à jour `todo.md` (coche la case avec un [x]) et résume l'action dans `MEMORY.md`.
-5. Si tu manques d'infos, arrête-toi et pose-moi la question.

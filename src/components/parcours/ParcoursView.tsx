@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import {
   Calendar, MapPin, GraduationCap,
@@ -33,6 +34,8 @@ const cardVariants = {
 };
 
 export default function ParcoursView({ experiences, skillCategories, education, softSkills }: Props) {
+  const t = useTranslations('parcours');
+
   return (
     <div style={{ paddingBlock: '3rem' }}>
 
@@ -49,7 +52,7 @@ export default function ParcoursView({ experiences, skillCategories, education, 
           letterSpacing: '-0.03em',
           marginBottom: '0.75rem',
         }}>
-          Mon <span className="gradient-text">Parcours</span>
+          {t('page_title')} <span className="gradient-text">{t('page_highlight')}</span>
         </h1>
         <p style={{
           color: 'var(--text-secondary)',
@@ -57,8 +60,7 @@ export default function ParcoursView({ experiences, skillCategories, education, 
           maxWidth: '520px',
           lineHeight: 1.7,
         }}>
-          Expériences professionnelles, stack technique et formation
-          académique — tout ce qui a construit le développeur que je suis.
+          {t('page_description')}
         </p>
       </motion.div>
 
@@ -70,9 +72,9 @@ export default function ParcoursView({ experiences, skillCategories, education, 
 
           {/* Label section */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '2rem' }}>
-            <Briefcase size={16} style={{ color: 'var(--accent-start)' }} />
+            <Terminal size={16} style={{ color: 'var(--accent-start)' }} />
             <h2 style={{ fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
-              Expériences
+              {t('skills_label')}
             </h2>
             <div style={{ flex: 1, height: '1px', background: 'var(--border)' }} />
           </div>
@@ -180,7 +182,7 @@ export default function ParcoursView({ experiences, skillCategories, education, 
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1.5rem' }}>
               <Heart size={16} style={{ color: 'var(--accent-start)' }} />
               <h2 style={{ fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
-                Savoir-être
+                {t('softskills_label')}
               </h2>
               <div style={{ flex: 1, height: '1px', background: 'var(--border)' }} />
             </div>
@@ -219,7 +221,7 @@ export default function ParcoursView({ experiences, skillCategories, education, 
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1.5rem' }}>
               <GraduationCap size={16} style={{ color: 'var(--accent-start)' }} />
               <h2 style={{ fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
-                Formation
+                {t('formation_label')}
               </h2>
               <div style={{ flex: 1, height: '1px', background: 'var(--border)' }} />
             </div>

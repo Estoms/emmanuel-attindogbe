@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Terminal, Zap, ArrowUpRight, Github, ExternalLink } from 'lucide-react';
 import type { Project } from '@/types';
@@ -16,6 +17,8 @@ const cardVariants = {
 };
 
 export default function ProjectsView({ projects }: Props) {
+  const t = useTranslations('projects');
+
   const featured  = projects.filter((p) => p.featured);
   const secondary = projects.filter((p) => !p.featured);
 
@@ -35,17 +38,16 @@ export default function ProjectsView({ projects }: Props) {
           letterSpacing: '-0.03em',
           marginBottom: '0.75rem',
         }}>
-          Mes <span className="gradient-text">Projets</span>
+          {t('page_title')} <span className="gradient-text">{t('page_highlight')}</span>
         </h1>
         <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', maxWidth: '540px', lineHeight: 1.7 }}>
-          Applications conçues, développées et déployées — du besoin terrain
-          à la solution opérationnelle.
+          {t('page_description')}
         </p>
       </motion.div>
 
       {/* ════════ FEATURED — GRANDES CARTES ════════ */}
       <section style={{ marginBottom: '5rem' }}>
-        <SectionLabel label="Projets Phares" />
+        <SectionLabel label={`${t('section_title')} ${t('section_highlight')}`} />
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', marginTop: '2rem' }}>
           {featured.map((project, i) => (
@@ -173,7 +175,7 @@ export default function ProjectsView({ projects }: Props) {
       {/* ════════ SECONDARY — GRILLE COMPACTE ════════ */}
       {secondary.length > 0 && (
         <section>
-          <SectionLabel label="Autres Projets" />
+          <SectionLabel label={t('other_projects')} />
 
           <div className="projects-secondary-grid" style={{ marginTop: '2rem' }}>
             {secondary.map((project, i) => (

@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { useActionState, useEffect, useRef } from 'react';
 import { sendEmail, type SendEmailState } from '@/actions/sendEmail';
 import { Send, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
@@ -27,6 +28,7 @@ const labelStyle: React.CSSProperties = {
 };
 
 export default function ContactForm() {
+  const t = useTranslations('contact');
   const [state, action, isPending] = useActionState(sendEmail, initialState);
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -50,32 +52,32 @@ export default function ContactForm() {
       display: 'flex', flexDirection: 'column', gap: '1.5rem',
     }}>
       <h2 style={{ fontSize: '1.1rem', fontWeight: 600, color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
-        Envoyer un message
+        {t('form_title')}
       </h2>
 
       <form ref={formRef} action={action} style={{ display: 'flex', flexDirection: 'column', gap: '1.1rem' }}>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
-          <label style={labelStyle}>Nom</label>
-          <input type="text" name="name" placeholder="Jean Dupont"
+          <label style={labelStyle}>{t('label_name')}</label>
+          <input type="text" name="name" placeholder={t('placeholder_name')}
             required disabled={isPending} style={fieldStyle} onFocus={onFocus} onBlur={onBlur} />
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
-          <label style={labelStyle}>Email</label>
-          <input type="email" name="email" placeholder="jean@example.com"
+          <label style={labelStyle}>{t('label_email')}</label>
+          <input type="email" name="email" placeholder={t('placeholder_email')}
             required disabled={isPending} style={fieldStyle} onFocus={onFocus} onBlur={onBlur} />
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
-          <label style={labelStyle}>Sujet</label>
-          <input type="text" name="subject" placeholder="Proposition de projet"
+          <label style={labelStyle}>{t('label_subject')}</label>
+          <input type="text" name="subject" placeholder={t('placeholder_subject')}
             required disabled={isPending} style={fieldStyle} onFocus={onFocus} onBlur={onBlur} />
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
-          <label style={labelStyle}>Message</label>
-          <textarea name="message" placeholder="Décrivez votre projet ou votre besoin..."
+          <label style={labelStyle}>{t('label_message')}</label>
+          <textarea name="message" placeholder={t('placeholder_message')}
             rows={5} required disabled={isPending}
             style={{ ...fieldStyle, resize: 'vertical' }}
             onFocus={onFocus} onBlur={onBlur} />
@@ -109,9 +111,9 @@ export default function ContactForm() {
           marginTop: '0.5rem',
         }}>
           {isPending ? (
-            <><Loader2 size={16} style={{ animation: 'spin 1s linear infinite' }} />Envoi en cours...</>
+            <><Loader2 size={16} style={{ animation: 'spin 1s linear infinite' }} />{t('btn_sending')}</>
           ) : (
-            <><Send size={15} />Envoyer le message</>
+            <><Send size={15} />{t('btn_send')}</>
           )}
         </button>
       </form>

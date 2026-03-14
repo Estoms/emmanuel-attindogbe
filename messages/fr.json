@@ -1,0 +1,109 @@
+{
+  "nav": {
+    "projects":  "Projets",
+    "parcours":  "Parcours",
+    "about":     "À propos",
+    "contact":   "Contact",
+    "cv":        "CV"
+  },
+  "hero": {
+    "badge":       "Disponible — Ouvert aux opportunités",
+    "title1":      "Emmanuel",
+    "title2":      "ATTINDOGBE",
+    "role":        "Développeur d'Applications & Systèmes",
+    "description": "Du backend à la production — je conçois des applications web et mobiles à impact réel. Passionné par le DevOps et le numérique responsable.",
+    "cta_projects": "Voir mes projets",
+    "cta_contact":  "Me contacter"
+  },
+  "intro": {
+    "label":    "Le développeur",
+    "line1":    "Développeur passionné par l'écosystème Full Stack et DevOps.",
+    "line2":    "Avec 3 expériences terrain, je conçois des applications robustes — du backend complexe jusqu'à l'interface mobile.",
+    "line3":    "Mon objectif : créer des solutions technologiques qui ont un impact réel et mesurable.",
+    "cta":      "En savoir plus",
+    "stat1_value": "3",  "stat1_label": "Stages terrain",
+    "stat2_value": "4",  "stat2_label": "Projets livrés",
+    "stat3_value": "5+", "stat3_label": "Langages"
+  },
+  "projects": {
+    "section_label": "Réalisations",
+    "section_title": "Projets",
+    "section_highlight": "Phares",
+    "see_all":   "Tous les projets",
+    "see_project": "Voir le projet",
+    "page_title": "Mes",
+    "page_highlight": "Projets",
+    "page_description": "Applications conçues, développées et déployées — du besoin terrain à la solution opérationnelle.",
+    "other_projects": "Autres Projets"
+  },
+  "parcours": {
+    "section_label": "Expériences",
+    "section_title": "Aperçu du",
+    "section_highlight": "Parcours",
+    "see_full":  "Voir le parcours complet",
+    "page_title": "Mon",
+    "page_highlight": "Parcours",
+    "page_description": "Expériences professionnelles, stack technique et formation académique.",
+    "experiences_label": "Expériences",
+    "skills_label": "Stack Technique",
+    "formation_label": "Formation",
+    "softskills_label": "Savoir-être"
+  },
+  "about": {
+    "page_title": "À",
+    "page_highlight": "Propos",
+    "label_formation": "Formation actuelle",
+    "label_location":  "Localisation",
+    "label_available": "Disponible — Ouvert aux opportunités",
+    "cta_contact":     "Me contacter",
+    "story_title":     "Mon Parcours",
+    "interests_title": "Centres d'intérêt Tech"
+  },
+  "contact": {
+    "badge":       "Disponible",
+    "title":       "Un système à optimiser ?",
+    "highlight":   "Discutons de votre prochain défi technique.",
+    "subtitle":    "Je réponds généralement sous 24h. Pas de formulaire perdu dans les limbes — une vraie conversation.",
+    "form_title":  "Envoyer un message",
+    "label_name":  "Nom",
+    "label_email": "Email",
+    "label_subject": "Sujet",
+    "label_message": "Message",
+    "placeholder_name":    "Jean Dupont",
+    "placeholder_email":   "jean@example.com",
+    "placeholder_subject": "Proposition de projet",
+    "placeholder_message": "Décrivez votre projet ou votre besoin...",
+    "btn_send":    "Envoyer le message",
+    "btn_sending": "Envoi en cours...",
+    "success":     "Message envoyé avec succès ! Je vous répondrai sous 24h.",
+    "error":       "Une erreur est survenue. Réessayez ou contactez-moi directement."
+  },
+  "cv": {
+    "summary_label": "Récapitulatif",
+    "role":          "Développeur d'Applications & Systèmes",
+    "file_label":    "Curriculum Vitæ",
+    "file_desc":     "Version à jour — PDF, 1 page",
+    "btn_download":  "Télécharger le CV",
+    "last_update":   "Dernière mise à jour : 2025"
+  },
+  "cta_section": {
+    "label":       "Travaillons ensemble",
+    "title":       "Un projet en tête ?",
+    "highlight":   "Parlons-en.",
+    "description": "Disponible pour des missions freelance, une alternance ou un poste en CDI. Je réponds sous 24h.",
+    "btn_contact": "Me contacter",
+    "btn_cv":      "Télécharger le CV"
+  },
+  "footer": {
+    "rights": "Tous droits réservés."
+  },
+  "metadata": {
+    "home_title":       "Emmanuel Attindogbe | Développeur d'Applications & Systèmes",
+    "home_description": "Développeur Full Stack spécialisé en applications web et mobiles. 3 stages terrain, 4 projets livrés.",
+    "projects_title":   "Projets",
+    "parcours_title":   "Parcours",
+    "about_title":      "À propos",
+    "contact_title":    "Contact",
+    "cv_title":         "CV"
+  }
+}

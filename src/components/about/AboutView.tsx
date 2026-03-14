@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import {
@@ -109,13 +110,15 @@ function TerminalBlock({ lines }: { lines: string[] }) {
 }
 
 export default function AboutView({ data }: Props) {
+  const t = useTranslations('about');
+
   return (
     <div style={{ paddingBlock: '3rem' }}>
 
       {/* ── TITRE ── */}
       <motion.div {...fadeUp(0)} style={{ marginBottom: '4rem' }}>
         <h1 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 700, letterSpacing: '-0.03em', marginBottom: '0.75rem' }}>
-          À <span className="gradient-text">Propos</span>
+          {t('page_title')} <span className="gradient-text">{t('page_highlight')}</span>
         </h1>
         <p style={{ color: 'var(--text-secondary)', fontSize: '1rem', maxWidth: '520px', lineHeight: 1.7 }}>
           {data.headline}
@@ -132,7 +135,7 @@ export default function AboutView({ data }: Props) {
         <motion.div {...fadeUp(0.2)} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', justifyContent: 'center' }}>
           <div>
             <p style={{ fontSize: '0.72rem', color: 'var(--text-muted)', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '0.3rem' }}>
-              Formation actuelle
+              {t('label_formation')}
             </p>
             <p style={{ fontSize: '0.9rem', color: 'var(--text-primary)', fontWeight: 500, lineHeight: 1.5 }}>
               {data.currentFormation}
@@ -157,7 +160,7 @@ export default function AboutView({ data }: Props) {
               background: 'var(--accent-start)', boxShadow: '0 0 8px var(--accent-start)', flexShrink: 0,
             }} />
             <p style={{ fontSize: '0.875rem', color: 'var(--accent-start)', fontWeight: 500 }}>
-              Disponible — Ouvert aux opportunités
+              {t('label_available')}
             </p>
           </div>
 
@@ -168,7 +171,7 @@ export default function AboutView({ data }: Props) {
             color: '#000', fontWeight: 700, fontSize: '0.85rem',
             textDecoration: 'none', width: 'fit-content',
           }}>
-            Me contacter
+            {t('cta_contact')}
             <ArrowRight size={14} />
           </NextLink>
         </motion.div>
@@ -178,7 +181,7 @@ export default function AboutView({ data }: Props) {
       <section style={{ marginBottom: '5rem' }}>
         <motion.div {...fadeUp(0)} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '2.5rem' }}>
           <h2 style={{ fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
-            Mon Parcours
+            {t('story_title')}
           </h2>
           <div style={{ flex: 1, height: '1px', background: 'var(--border)' }} />
         </motion.div>
@@ -210,7 +213,7 @@ export default function AboutView({ data }: Props) {
       <section>
         <motion.div {...fadeUp(0)} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '2rem' }}>
           <h2 style={{ fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
-            Centres d&apos;intérêt Tech
+            {t('interests_title')}
           </h2>
           <div style={{ flex: 1, height: '1px', background: 'var(--border)' }} />
         </motion.div>

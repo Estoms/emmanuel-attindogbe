@@ -1,26 +1,117 @@
 @import "tailwindcss";
 
+/* ============================================
+   DESIGN TOKENS — PREMIUM TECH DARK
+   ============================================ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Couleurs de base */
+  --background: #000000;
+  --foreground: #ffffff;
+
+  /* Surface / cartes */
+  --surface-1: #0a0a0a;
+  --surface-2: #111111;
+  --surface-3: #1a1a1a;
+
+  /* Bordures */
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.15);
+
+  /* Accent principal — Cyan/Teal gradient */
+  --accent-start: #22d3ee;   /* cyan-400 */
+  --accent-end: #2dd4bf;     /* teal-400 */
+  --accent-glow: rgba(34, 211, 238, 0.15);
+
+  /* Typographie */
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+
+  /* Textes */
+  --text-primary: #ffffff;
+  --text-secondary: #a3a3a3;
+  --text-muted: #525252;
+
+  /* Espacements / Layout */
+  --max-width: 1100px;
+  --header-height: 64px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ============================================
+   RESET & BASE
+   ============================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   UTILITAIRES GLOBAUX
+   ============================================ */
+
+/* Gradient texte accent — utilisable partout */
+.gradient-text {
+  background: linear-gradient(
+    135deg,
+    var(--accent-start),
+    var(--accent-end)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Conteneur centré standard */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+/* Ligne de séparation subtile */
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+}
+
+/* Focus visible accessible */
+:focus-visible {
+  outline: 2px solid var(--accent-start);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--surface-1);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--surface-3);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
 }

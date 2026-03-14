@@ -210,8 +210,8 @@ export default function ParcoursView({ experiences, skillCategories, education, 
                     flexShrink: 0,
                     background: 'linear-gradient(135deg, var(--accent-start), var(--accent-end))',
                   }} />
-                  {s}
-                </span>
+                  {skill}
+                </div>
               ))}
             </div>
           </div>

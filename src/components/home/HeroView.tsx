@@ -279,7 +279,7 @@ export default function HeroView({ featuredProjects, experiences }: Props) {
     <div style={{ paddingBottom: '6rem' }}>
 
       {/* ══════════════════════════════════
-          SECTION 1 — HERO
+          SECTION 1 — HERO PRINCIPAL
       ══════════════════════════════════ */}
       <section style={{
         position:       'relative',
@@ -287,7 +287,7 @@ export default function HeroView({ featuredProjects, experiences }: Props) {
         display:        'flex',
         flexDirection:  'column',
         justifyContent: 'center',
-        paddingBlock:   '4rem',
+        paddingBlock:   'clamp(2rem, 5vw, 4rem)',
         overflow:       'hidden',
       }}>
         {/* Fond grille + glow */}
@@ -427,10 +427,15 @@ export default function HeroView({ featuredProjects, experiences }: Props) {
 
               {/* CTAs */}
               <motion.div
-                initial={{ opacity: 0, y: 12 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.64 }}
-                style={{ display: 'flex', gap: '0.85rem', flexWrap: 'wrap' }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                style={{
+                  display:  'flex',
+                  gap:      '0.85rem',
+                  flexWrap: 'wrap',
+                  width:    '100%',
+                }}
               >
                 <Link href="/projects" style={{
                   display:        'inline-flex',
@@ -509,17 +514,16 @@ export default function HeroView({ featuredProjects, experiences }: Props) {
       <TechMarquee />
 
       {/* ══════════════════════════════════
-          SECTION 3 — L'HUMAIN
+          SECTION 3 — L'HUMAIN (Intro)
       ══════════════════════════════════ */}
-      <section
-        ref={introRef}
-        style={{
-          paddingBlock: '6rem',
-          display:      'flex',
-          alignItems:   'center',
-        }}
-      >
-        <div className="intro-grid">
+      <section ref={introRef} style={{ paddingBlock: 'clamp(3rem, 6vw, 6rem)' }}>
+        <div className="intro-grid" style={{
+          display:             'grid',
+          gridTemplateColumns: '1fr 1fr',
+          gap:                 '5rem',
+          alignItems:          'center',
+          width:               '100%',
+        }}>
 
           {/* Photo — arrive EN PREMIER */}
           <motion.div
@@ -604,7 +608,7 @@ export default function HeroView({ featuredProjects, experiences }: Props) {
               borderRadius:        '10px',
               overflow:            'hidden',
               border:              '1px solid var(--border)',
-              maxWidth:            '380px',
+              maxWidth:            '100%',
             }}>
               {[
                 { value: tIntro('stat1_value'), label: tIntro('stat1_label') },
@@ -654,7 +658,7 @@ export default function HeroView({ featuredProjects, experiences }: Props) {
       {/* ══════════════════════════════════
           SECTION 4 — PROJETS PHARES
       ══════════════════════════════════ */}
-      <section style={{ paddingBlock: '5rem' }}>
+      <section style={{ paddingBlock: 'clamp(2.5rem, 5vw, 5rem)' }}>
 
         {/* Header section */}
         <motion.div
@@ -848,10 +852,10 @@ export default function HeroView({ featuredProjects, experiences }: Props) {
       </section>
 
       {/* ══════════════════════════════════
-          SECTION 5 — APERÇU PARCOURS
+          SECTION 5 — PARCOURS (Preview)
       ══════════════════════════════════ */}
       <section style={{
-        paddingBlock: '5rem',
+        paddingBlock: 'clamp(2.5rem, 5vw, 5rem)',
         borderTop:    '1px solid var(--border)',
       }}>
         <motion.div
@@ -983,7 +987,7 @@ export default function HeroView({ featuredProjects, experiences }: Props) {
           SECTION 6 — CTA FINAL
       ══════════════════════════════════ */}
       <section style={{
-        paddingBlock: '5rem',
+        paddingBlock: 'clamp(2.5rem, 5vw, 5rem)',
         borderTop:    '1px solid var(--border)',
       }}>
         <motion.div
@@ -1120,8 +1124,18 @@ export default function HeroView({ featuredProjects, experiences }: Props) {
           }
         }
         @media (max-width: 768px) {
+          .marquee-icon-grid { grid-template-columns: repeat(4, 1fr) !important; }
+          .hero-top-grid {
+            grid-template-columns: 1fr !important;
+            gap: 2.5rem !important;
+          }
+          .intro-grid {
+            grid-template-columns: 1fr !important;
+            gap: 2.5rem !important;
+          }
           .featured-projects-grid {
             grid-template-columns: 1fr !important;
+            gap: 1rem !important;
           }
         }
       `}</style>

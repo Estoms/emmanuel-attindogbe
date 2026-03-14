@@ -23,7 +23,7 @@ export default function ProjectsView({ projects }: Props) {
   const secondary = projects.filter((p) => !p.featured);
 
   return (
-    <div style={{ paddingBlock: '3rem' }}>
+    <div style={{ paddingBlock: 'clamp(1.5rem, 4vw, 3rem)' }}>
 
       {/* ── TITRE ── */}
       <motion.div
@@ -248,7 +248,13 @@ export default function ProjectsView({ projects }: Props) {
           gap: 1.25rem;
         }
         @media (max-width: 768px) {
-          .project-featured-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+          .project-featured-grid {
+            grid-template-columns: 1fr !important;
+            gap: 1.5rem !important;
+          }
+          .projects-secondary-grid {
+            grid-template-columns: 1fr !important;
+          }
         }
       `}</style>
     </div>

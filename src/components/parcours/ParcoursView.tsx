@@ -37,7 +37,7 @@ export default function ParcoursView({ experiences, skillCategories, education, 
   const t = useTranslations('parcours');
 
   return (
-    <div style={{ paddingBlock: '3rem' }}>
+    <div style={{ paddingBlock: 'clamp(1.5rem, 4vw, 3rem)' }}>
 
       {/* ── TITRE ── */}
       <motion.div
@@ -210,8 +210,8 @@ export default function ParcoursView({ experiences, skillCategories, education, 
                     flexShrink: 0,
                     background: 'linear-gradient(135deg, var(--accent-start), var(--accent-end))',
                   }} />
-                  {skill}
-                </div>
+                  {s}
+                </span>
               ))}
             </div>
           </div>

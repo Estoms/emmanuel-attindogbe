@@ -121,7 +121,10 @@ export default function CvView({ highlights }: Props) {
           align-items: center;
         }
         @media (max-width: 768px) {
-          .cv-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+          .cv-grid {
+            grid-template-columns: 1fr !important;
+            gap: 2rem !important;
+          }
         }
       `}</style>
     </div>

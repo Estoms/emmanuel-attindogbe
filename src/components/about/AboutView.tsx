@@ -113,7 +113,7 @@ export default function AboutView({ data }: Props) {
   const t = useTranslations('about');
 
   return (
-    <div style={{ paddingBlock: '3rem' }}>
+    <div style={{ paddingBlock: 'clamp(1.5rem, 4vw, 3rem)' }}>
 
       {/* ── TITRE ── */}
       <motion.div {...fadeUp(0)} style={{ marginBottom: '4rem' }}>
@@ -251,8 +251,13 @@ export default function AboutView({ data }: Props) {
           grid-template-columns: 200px 1fr;
         }
         @media (max-width: 768px) {
-          .about-top-grid { grid-template-columns: 1fr !important; }
-          .story-card { grid-template-columns: 1fr !important; }
+          .about-top-grid {
+            grid-template-columns: 1fr !important;
+            gap: 2rem !important;
+          }
+          .story-card {
+            grid-template-columns: 1fr !important;
+          }
         }
       `}</style>
     </div>

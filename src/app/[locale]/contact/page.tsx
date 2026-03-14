@@ -99,7 +99,10 @@ export default async function ContactPage({
       </div>
       <style>{`
         @media (max-width: 768px) {
-          .contact-grid { grid-template-columns: 1fr !important; gap: 3rem !important; }
+          .contact-grid {
+            grid-template-columns: 1fr !important;
+            gap: 2rem !important;
+          }
         }
       `}</style>
     </div>

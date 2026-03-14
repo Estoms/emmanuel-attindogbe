@@ -105,5 +105,11 @@
     "about_title":      "À propos",
     "contact_title":    "Contact",
     "cv_title":         "CV"
+  },
+  "notFound": {
+    "code":        "404",
+    "title":       "Page introuvable",
+    "description": "Cette page n'existe pas ou a été déplacée.",
+    "cta":         "Retour à l'accueil"
   }
 }

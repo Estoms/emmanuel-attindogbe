@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
@@ -6,6 +6,7 @@ import { getMessages, getTranslations } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
 import PageTransition from '@/components/providers/PageTransition';
+import CustomCursor from '@/components/ui/CustomCursor';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import '@/app/globals.css';
@@ -21,6 +22,15 @@ const geistMono = Geist_Mono({
 });
 
 const siteUrl = 'https://emmanuel-attindogbe.vercel.app';
+
+export const viewport: Viewport = {
+  width:        'device-width',
+  initialScale: 1,
+  themeColor:   [
+    { media: '(prefers-color-scheme: dark)',  color: '#000000' },
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+  ],
+};
 
 export async function generateMetadata({
   params,
@@ -110,6 +120,7 @@ export default async function LocaleLayout({
       >
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>
+            <CustomCursor />
             <Header />
             <main
               className="container"

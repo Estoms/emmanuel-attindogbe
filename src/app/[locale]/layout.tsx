@@ -10,24 +10,25 @@ import CustomCursor from '@/components/ui/CustomCursor';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import '@/app/globals.css';
+import { Analytics } from '@vercel/analytics/next';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
-  subsets:  ['latin'],
+  subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
-  subsets:  ['latin'],
+  subsets: ['latin'],
 });
 
 const siteUrl = 'https://emmanuel-attindogbe.vercel.app';
 
 export const viewport: Viewport = {
-  width:        'device-width',
+  width: 'device-width',
   initialScale: 1,
-  themeColor:   [
-    { media: '(prefers-color-scheme: dark)',  color: '#000000' },
+  themeColor: [
+    { media: '(prefers-color-scheme: dark)', color: '#000000' },
     { media: '(prefers-color-scheme: light)', color: '#ffffff' },
   ],
 };
@@ -43,7 +44,7 @@ export async function generateMetadata({
   return {
     metadataBase: new URL(siteUrl),
     title: {
-      default:  t('home_title'),
+      default: t('home_title'),
       template: `%s | Emmanuel Attindogbe`,
     },
     description: t('home_description'),
@@ -55,19 +56,19 @@ export async function generateMetadata({
       'Android', 'DevOps',
     ],
     openGraph: {
-      type:     'website',
-      locale:   locale === 'fr' ? 'fr_FR' : 'en_US',
-      url:      siteUrl,
+      type: 'website',
+      locale: locale === 'fr' ? 'fr_FR' : 'en_US',
+      url: siteUrl,
       siteName: 'Emmanuel Attindogbe — Portfolio',
-      title:    t('home_title'),
+      title: t('home_title'),
       description: t('home_description'),
       images: [{ url: '/og-image.png', width: 1200, height: 630 }],
     },
     twitter: {
-      card:        'summary_large_image',
-      title:       t('home_title'),
+      card: 'summary_large_image',
+      title: t('home_title'),
       description: t('home_description'),
-      images:      ['/og-image.png'],
+      images: ['/og-image.png'],
     },
     alternates: {
       canonical: `${siteUrl}/${locale}`,
@@ -98,7 +99,7 @@ export default async function LocaleLayout({
   params,
 }: {
   children: React.ReactNode;
-  params:   Promise<{ locale: string }>;
+  params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
 
@@ -111,11 +112,11 @@ export default async function LocaleLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         style={{
-          display:         'flex',
-          flexDirection:   'column',
-          minHeight:       '100vh',
+          display: 'flex',
+          flexDirection: 'column',
+          minHeight: '100vh',
           backgroundColor: 'var(--background)',
-          color:           'var(--foreground)',
+          color: 'var(--foreground)',
         }}
       >
         <NextIntlClientProvider messages={messages}>
@@ -136,6 +137,7 @@ export default async function LocaleLayout({
             <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );

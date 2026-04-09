@@ -5,7 +5,9 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import {
   Shield, Server, Link, Leaf, Lock, Zap,
+  MapPin, Mail, ArrowRight,
 } from 'lucide-react';
+import NextLink from 'next/link';
 import { aboutData } from '@/data/about';
 
 type Props = { data: typeof aboutData };
@@ -16,10 +18,10 @@ const iconMap: Record<string, React.ComponentType<{ size?: number; style?: React
 };
 
 const fadeUp = (delay = 0) => ({
-  initial:     { opacity: 0, y: 20 },
+  initial: { opacity: 0, y: 20 },
   whileInView: { opacity: 1, y: 0 },
-  viewport:    { once: true, margin: '-40px' },
-  transition:  { duration: 0.5, delay, ease: 'easeOut' as const },
+  viewport: { once: true, margin: '-40px' },
+  transition: { duration: 0.5, delay, ease: 'easeOut' as const },
 });
 
 // ── Composant Terminal animé ──
@@ -53,20 +55,20 @@ function TerminalBlock({ lines }: { lines: string[] }) {
   return (
     <div style={{
       borderRadius: '10px',
-      border:       '1px solid var(--border)',
-      background:   'var(--surface-1)',
-      overflow:     'hidden',
-      fontFamily:   'var(--font-mono)',
-      fontSize:     '0.82rem',
+      border: '1px solid var(--border)',
+      background: 'var(--surface-1)',
+      overflow: 'hidden',
+      fontFamily: 'var(--font-mono)',
+      fontSize: '0.82rem',
     }}>
       {/* Barre titre terminal */}
       <div style={{
-        display:      'flex',
-        alignItems:   'center',
-        gap:          '0.4rem',
-        padding:      '0.65rem 1rem',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '0.4rem',
+        padding: '0.65rem 1rem',
         borderBottom: '1px solid var(--border)',
-        background:   'var(--surface-2)',
+        background: 'var(--surface-2)',
       }}>
         {['#ff5f57', '#ffbd2e', '#28c840'].map((c) => (
           <span key={c} style={{

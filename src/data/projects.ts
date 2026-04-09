@@ -2,18 +2,17 @@ import type { Project } from '@/types';
 
 // ============================================================
 // PROJETS — EMMANUEL ATTINDOGBE
-// Données 100% issues du CV — zéro invention
 // ============================================================
 
 export const projects: Project[] = [
   {
-    id:        'blood-management-web',
-    title:     'Système de Gestion des Dons de Sang',
+    id: 'blood-management-web',
+    title: 'Système de Gestion des Dons de Sang',
     shortDesc: "Application web intégrée pour le service de transfusion sanguine du département de l'Atlantique.",
     description:
       "Application web de gestion intégrée des dons de sang et des sorties terrain pour le service de Transfusion Sanguine de la DDS-ATL. Conçue de A à Z pendant 9 mois de stage, elle remplace un système entièrement manuel sur papier et couvre 100% des flux métiers du service.",
-    context:   'Stage — Service de Transfusion Sanguine, DDS-ATL',
-    period:    'Mars – Déc 2023',
+    context: 'Stage — Service de Transfusion Sanguine, DDS-ATL',
+    period: 'Mars – Déc 2023',
     techStack: ['PHP', 'MySQL', 'JavaScript', 'HTML', 'CSS', 'SQL'],
     impact: [
       '−60% de temps de traitement des stocks',
@@ -27,18 +26,18 @@ export const projects: Project[] = [
       'Interface opérationnelle dès la première utilisation par les équipes terrain',
       'Gestion des donateurs, sorties terrain et stocks médicaux en temps réel',
     ],
-    status:   'completed',
-    links:    {},
+    status: 'completed',
+    links: {},
     featured: true,
   },
   {
-    id:        'blood-management-android',
-    title:     'Application Android — Dons de Sang & Stocks',
+    id: 'blood-management-android',
+    title: 'Application Android — Dons de Sang & Stocks',
     shortDesc: 'Application mobile permettant la coordination en temps réel entre donneurs, soignants et centres de collecte.',
     description:
       "Application Android conçue pour digitaliser et optimiser la chaîne complète du don de sang : inscription des donneurs, suivi individuel des dons, rappels automatiques, et vérification en temps réel de la disponibilité des poches de sang pour les établissements médicaux.",
-    context:   'Projet personnel — extension du stage DDS-ATL',
-    period:    '2023 – 2024',
+    context: 'Projet personnel — extension du stage DDS-ATL',
+    period: '2023 – 2024',
     techStack: ['Android', 'Java', 'Kotlin', 'SQLite', 'REST API'],
     impact: [
       'Vérification des stocks en temps réel',
@@ -52,18 +51,18 @@ export const projects: Project[] = [
       'Consultation instantanée de la disponibilité des poches par les établissements',
       'Interface mobile pensée pour une utilisation terrain rapide',
     ],
-    status:   'completed',
-    links:    {},
+    status: 'completed',
+    links: {},
     featured: true,
   },
   {
-    id:        'sport-platform',
-    title:     "Plateforme Web — Groupe Sportif & Inscription Événement",
+    id: 'sport-platform',
+    title: "Plateforme Web — Groupe Sportif & Inscription Événement",
     shortDesc: "Site communautaire et plateforme d'inscription en ligne pour un événement de marche avec dashboard stats.",
     description:
       "Développement d'un site web pour un groupe de sport et d'une plateforme d'inscription en ligne pour leur événement de marche. Le site permet aux membres de se connecter, suivre les activités et partager leurs réalisations. La plateforme fournit aux organisateurs un dashboard statistique des participants.",
-    context:   'Projet client',
-    period:    '2023',
+    context: 'Projet client',
+    period: '2023',
     techStack: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
     impact: [
       'Inscription en ligne 100% digitale',
@@ -77,18 +76,18 @@ export const projects: Project[] = [
       'Tableau de bord statistiques des participants pour les responsables',
       'Architecture double : site communautaire + outil de gestion événementiel',
     ],
-    status:   'completed',
-    links:    {},
+    status: 'completed',
+    links: {},
     featured: false,
   },
   {
-    id:        'school-evaluation',
-    title:     'Système de Gestion des Évaluations — Collège AGBIDI',
+    id: 'school-evaluation',
+    title: 'Système de Gestion des Évaluations — Collège AGBIDI',
     shortDesc: "Application desktop automatisant la collecte, correction et enregistrement des notes d'un collège.",
     description:
       "Application de gestion des évaluations pour le collège AGBIDI annexe Le Paradis, visant à automatiser l'ensemble du flux scolaire : collecte des notes, correction et enregistrement. Réduit les erreurs humaines et améliore la qualité du système d'information éducatif.",
-    context:   'Projet académique',
-    period:    '2022 – 2023',
+    context: 'Projet académique',
+    period: '2022 – 2023',
     techStack: ['Visual Basic .NET', 'SQL Server', 'WinForms', 'UML'],
     impact: [
       'Flux scolaire 100% automatisé',
@@ -102,8 +101,8 @@ export const projects: Project[] = [
       'Base de données SQL structurée pour la persistance des résultats',
       'Automatisation du circuit complet : collecte → correction → enregistrement',
     ],
-    status:   'completed',
-    links:    {},
+    status: 'completed',
+    links: {},
     featured: false,
   },
 ];

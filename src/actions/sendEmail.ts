@@ -5,7 +5,7 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export type SendEmailState = {
-  status:  'idle' | 'success' | 'error';
+  status: 'idle' | 'success' | 'error';
   message: string;
 };
 
@@ -14,8 +14,8 @@ export async function sendEmail(
   formData: FormData,
 ): Promise<SendEmailState> {
 
-  const name    = formData.get('name')    as string;
-  const email   = formData.get('email')   as string;
+  const name = formData.get('name') as string;
+  const email = formData.get('email') as string;
   const subject = formData.get('subject') as string;
   const message = formData.get('message') as string;
 
@@ -29,8 +29,8 @@ export async function sendEmail(
 
   try {
     await resend.emails.send({
-      from:    'Portfolio Contact <onboarding@resend.dev>',
-      to:      [process.env.CONTACT_EMAIL as string],
+      from: 'Portfolio Contact <contact@attindogbe.com>',
+      to: [process.env.CONTACT_EMAIL as string],
       replyTo: email,
       subject: `[Portfolio] ${subject} — ${name}`,
       html: `
